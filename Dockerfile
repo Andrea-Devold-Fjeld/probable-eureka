@@ -1,2 +1,6 @@
 FROM ubuntu:latest
-LABEL authors="andre"
+
+ADD build/libs/app.jar app.jar
+
+
+EXPOSE 8080
