@@ -2,12 +2,12 @@ on:
   push
 jobs:
   build-and-push:
-    permissions:
-        contents: read
-        packages: write
+
     name: Build && Push && Deploy
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: read
+      packages: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -15,7 +15,7 @@ jobs:
         id: auth
         uses: 'google-github-actions/auth@v2'
         with:
-          project_id: ${{ secrets.GCP_PROJECT_ID }}
+          project_id: 'andreaprosjekt'
           workload_identity_provider: 'projects/543801275775/locations/global/workloadIdentityPools/github/providers/probable-eureka'
       - name: Docker Auth
         id: docker-auth
