@@ -12,9 +12,8 @@ jobs:
         id: auth
         uses: 'google-github-actions/auth@v2'
         with:
-          token_format: 'access_token'
-          workload_identity_provider: '${{ secrets.WIF_PROVIDER }}'
-          service_account: '${{ secrets.WIF_SERVICE_ACCOUNT }}'
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+          workload_identity_provider: 'projects/543801275775/locations/global/workloadIdentityPools/github/providers/probable-eureka'
       - name: Docker Auth
         id: docker-auth
         uses: 'docker/login-action@v1'
