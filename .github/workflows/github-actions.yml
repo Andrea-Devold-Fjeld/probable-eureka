@@ -2,6 +2,9 @@ on:
   push
 jobs:
   build-and-push:
+    permissions:
+        contents: read
+        packages: write
     name: Build && Push && Deploy
     runs-on: ubuntu-latest
 
