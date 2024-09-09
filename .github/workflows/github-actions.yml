@@ -3,7 +3,7 @@ on:
 jobs:
   build-and-push:
 
-    name: Build && Push && Deploy
+    name: Build and push container to Artifact Registry
     runs-on: ubuntu-latest
     permissions:
       contents: read
